@@ -1,0 +1,90 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style-position: inside;
+  list-style-image: url('./assets/anchor.svg');
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  
+  background-image: url(./assets/undraw_online_collaboration_7pfp.svg);
+  background-attachment: fixed;
+  background-position: 80%;
+  background-size: 50vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  /*
+  background-color (define a cor do fundo);
+  background-image (define uma imagem de fundo);
+  background-repeat (define a maneira como a imagem de fundo é posicionada);
+  background-attachment (define se a imagem de fundo "rola" ou não com a tela);
+  background-position (define como e onde a imagem de fundo é posicionada);
+  background-clip (define a área do box onde a imagem de fundo é aplicada);
+  background-origin (define a posição de origem da imagem no box);
+  background-size (define as dimensões da imagem no box);
+  background (maneira abreviada para declarar todas as propriedades anteriores).
+  */
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #fff3cc;
+  box-shadow: #63FFA1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 55px;
+}
+
+header .navBar {
+  display: flex;
+  align-items: center;
+}
+
+.navBar ul {
+  display: flex;
+}
+.navBar ul li {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.navBar ul li a {
+  display: block;
+  padding: 10px;
+}
+
+#app {
+  padding: 100px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: flex-start;
+}
+#app div {
+  display: inline;
+}
+
+#app div button {
+  margin-top: 3px;
+  border-radius: 3px;
+  background-color: #63FFA1;
+  text-decoration: #63FFA1;
+  padding: 4px 24px;
+
+}
+input {
+  border-color:#63FFA1;
+  border-radius: 6px;
+  padding: 4px;
+  margin-bottom: 40px
+};

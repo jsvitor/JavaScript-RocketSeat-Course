@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+  <!--
+    Como referenciar elementos do html através do JS. E não
+    Simplismente disparar eventos do html pro JS.
+    Resumo:
+    Buscar uma informação da árvore de elementos, através do script.
+  -->
+
+  <div id="app">
+    <input type="text" name="nome" id="nome" />
+    <input type="text" name="orangutando" />
+    <button class="botao">Adicionar</button>
+  </div>
+
+  <script>
+    // métodos para pegar algum elemento da DOM:
+    // var inputElement = document.getElementById('nome');
+    
+    //  var inputElement = document.getElementsByTagName('input')[0];
+    //  var inputElement2 = document.getElementsByClassName('botao');
+    //  var inputElement3 = document.querySelector('div#app input');
+    //  var inputElement4 = document.querySelector('input[name=nome]');
+    //  var inputElement5 = document.querySelectorAll('input');
+    var btnElement = document.querySelector('button.botao');
+
+    var inputElementNome = document.querySelector('input[name=orangutando]');
+    var btnElement = document.querySelector('button.botao');
+
+
+    btnElement.onclick = function() {
+      alert('Botão Clicado');
+    }
+
+    btnElement.onclick = function() {
+      var text = inputElementNome.value;
+
+      alert(text);
+    }
+    console.log(inputElement)
+    console.log(inputElement2)
+    console.log(inputElement3)
+    console.log(inputElement4)
+    console.log(inputElement5)
+
+  </script>
+</body>
+
+</html>

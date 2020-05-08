@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+  <div id="app">
+    <form action="">
+      <ul class="names">
+        <!-- list Itens-->
+      </ul>
+    </form>
+
+    <input type="text" name="name" placeholder="type one name.">
+    <button onclick="addNewName()">Add</button>
+  </div>
+
+  <script>
+    var names = [
+      "Diego",
+      "Gabriel",
+      "Lucas"
+    ];
+
+    function pushName(name) {
+      var listItem = document.createElement('li');
+      var textItem = document.createTextNode(name);
+      listItem.appendChild(textItem);
+
+      var unorderedLists = document.querySelector('ul.names')
+      unorderedLists.appendChild(listItem);
+    };
+    // adicionando os nomes que já estão na lista.
+    for (name of names) {
+      pushName(name);
+    }
+
+    function addNewName() {
+      var textInput = document.querySelector('input[name=name]');
+      var newName = textInput.value;
+      pushName(newName);
+
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+  <style>
+    body {
+      background-image: url('../assets/undraw_the_world_is_mine_nb0e.svg');
+      background-repeat: no-repeat;
+      background-size: 400px;
+      background-position: 80% 80%;
+      background-color: aqua;
+    }
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    Como referenciar elementos do html através do JS. E não
+    Simplismente disparar eventos do html pro JS. Buscar uma informação
+    da nossa árvore de elementos, através do nosso script.
+  -->
+
+  <div id="app">
+    <button id="botao" style="color:blue;">Add Square</button>
+    <div class="box">
+      <!-- squares added here -->
+    </div>
+  </div>
+  
+  <script>
+    /* --------------------------- Random Color INIT ------------------------ */
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    /* --------------------------- Random Color END ------------------------- */
+
+    /* -------------- Select botton and add backgroundColor ----------------- */
+    var btnElement = document.querySelector('div#app button#botao');
+    btnElement.setAttribute('style', `
+      background-color:${getRandomColor()};
+      padding: 10px;
+      margin: 20px 3px;
+      `);
+
+
+    /* ---------------------------------------------------------------------- */
+    /* --------------------------- Create a Square - INIT ------------------- */
+    /* ---------------------------------------------------------------------- */
+    function createSquare() {
+      var boxElement = document.createElement('div');
+
+      var containerElement = document.querySelector('.box');
+      containerElement.appendChild(boxElement);
+
+      // style of squareElement
+      boxElement.style.width = 100;
+      boxElement.style.height = 100;
+      boxElement.style.backgroundColor = '#00f3c4';
+      boxElement.style.margin = 3;
+      boxElement.style.borderRadius = '12px';
+      
+      // Change color with setInterval
+      setInterval(() => {
+        boxElement.style.backgroundColor = getRandomColor()
+      }, 1000);
+
+      // Change color with mouse hover
+      boxElement.onmouseover = function () {
+        boxElement.style.backgroundColor = getRandomColor()
+      }
+    };
+
+    btnElement.onclick = createSquare;
+    /* ---------------------------------------------------------------------- */
+    /* --------------------------- Create a Square - END -------------------- */
+    /* ---------------------------------------------------------------------- */
+
+
+  </script>
+</body>
+
+</html>

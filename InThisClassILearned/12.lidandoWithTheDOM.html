@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+  <!--
+    Como referenciar elementos do html através do JS. E não
+    Simplismente disparar eventos do html pro JS. Buscar uma informação
+    da nossa árvore de elementos, através do nosso script.
+  -->
+
+  <div id="app">
+    <input id="nome" />
+  </div>
+
+  <script>
+    // Além da gente poder referenciar elementos da nossa DOM através do JS
+    // Nós também podemos criar.
+    // agora vamos aprender a criar elementos no html atraves do JS
+
+    var linkElements = document.createElement('a');
+    linkElements.setAttribute('href', 'https://jszvitor.github.io');
+    linkElements.setAttribute('title', 'Site de @JSZVITOR');
+    
+    var textElement = document.createTextNode('Acessar o site do Vitor');
+    linkElements.appendChild(textElement);
+
+    var containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElements);
+
+    // remover um elemento da DOM pelo JS.
+    var inputElement = document.querySelector('#nome');
+    containerElement.removeChild(inputElement);
+  </script>
+</body>
+
+</html>

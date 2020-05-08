@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+  <!--
+    Como referenciar elementos do html através do JS. E não
+    Simplismente disparar eventos do html pro JS. Buscar uma informação
+    da nossa árvore de elementos, através do nosso script.
+  -->
+
+  <div id="app">
+    <div class="box">
+
+    </div>
+  </div>
+
+  <script>
+    var boxElement = document.querySelector('.box');
+
+    boxElement.style.width = 100;
+    boxElement.style.height = 100;
+    boxElement.style.backgroundColor = '#00f3c4';
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul class="names">
+      <!-- list Itens-->
+    </ul>
+  </div>
+
+  <script>
+    var names = [
+      "Diego",
+      "Gabriel",
+      "Lucas"
+    ];
+
+    function putName(name) {
+      var listItem = document.createElement('li');
+      var textItem = document.createTextNode(name);
+      listItem.appendChild(textItem);
+
+      var unorderedLists = document.querySelector('ul.names')
+      unorderedLists.appendChild(listItem);
+
+      console.log(document.querySelector('li'));
+    };
+
+    for (name of names) {
+      putName(name);
+    }
+    
+  </script>
+</body>
+
+</html>

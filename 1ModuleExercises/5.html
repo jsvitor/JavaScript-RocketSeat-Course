@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <title>Curso JS</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    function identifySkills (users) {
+      for (let value of users) {
+        console.log("O "+ value.nome + " possui as habilidades: " + value.habilidades.join(", ") + ".")
+            // O Diego possui as habilidades: Javascript, ReactJS, Redux
+      }
+    };
+
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+
+    identifySkills(usuarios);
+  </script>
+</body>
+
+</html>
